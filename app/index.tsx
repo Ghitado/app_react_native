@@ -29,13 +29,14 @@ export default function Index() {
       flex: 1,
       justifyContent: "center",
       alignItems: "flex-start",
-      backgroundColor: "#FC8EAC",
+      backgroundColor: "#d9e8ed",
       padding: 20,
     },
     titulo:{
       color:"#000000",
+      fontFamily: 'helvetica',
       fontSize: 30,
-      textAlign: "left",
       fontWeight: "bold",  
+      textAlign: "left",
     }
   })
