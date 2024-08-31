@@ -1,13 +1,19 @@
 import { View, ScrollView } from "react-native"
 import ItemProduto from "../ItemProduto"
+import Produto from "@/app/Models/Produto"
+import Style from "@/app/Styles/Default"
 
-function ListaProdutos({produtos}: {produtos: 
-    {nome: string, preco: number}[]}) {
+interface PropListaProd {
+    produtos: Produto[]
+}
+
+const ListaProdutos:React.FC<PropListaProd> = 
+        ({produtos}: {produtos: Produto[]}) => {
     return (
         <ScrollView>
-        <View>
+        <View style={Style.container}>
             {produtos.map((p) => 
-                <ItemProduto produto={p}>
+                <ItemProduto produto={p} key={p.id}>
                     
                 </ItemProduto>)}
         </View>
@@ -15,4 +21,4 @@ function ListaProdutos({produtos}: {produtos:
     )
 }
 
-export default ListaProdutos
+export default ListaProdutos;
